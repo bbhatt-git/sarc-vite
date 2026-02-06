@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#059669" />
+    <meta name="description" content="SARC Education Foundation - The leading educational institution in Mahendranagar, Nepal. Offering world-class education in Science and Management." />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bbhatt-git/sarc-school/refs/heads/sarc/public/images/sarc.png" />
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/bbhatt-git/sarc-school/refs/heads/sarc/public/images/sarc.png" />
+
+    <title>SARC Education Foundation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO (Local Business / Organization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "SARC Education Foundation",
+      "url": "https://sarc.edu.np",
+      "logo": "https://raw.githubusercontent.com/bbhatt-git/sarc-school/refs/heads/sarc/public/images/sarc.png",
+      "foundingDate": "2015",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bheemdatt-6",
+        "addressLocality": "Mahendranagar",
+        "addressRegion": "Kanchanpur",
+        "postalCode": "10400",
+        "addressCountry": "NP"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+977-099-525271",
+        "contactType": "admissions",
+        "areaServed": "NP",
+        "availableLanguage": ["English", "Nepali"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/sarceducation",
+        "https://www.instagram.com/sarceducation"
+      ]
+    }
+    </script>
+
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Poppins"', 'sans-serif'],
+              sans: ['"Poppins"', 'sans-serif'],
+            },
+            colors: {
+              sarc: {
+                main: '#0f172a', // Deep Slate for text
+                green: '#059669', // Emerald Green for secondary
+                paper: '#fdfbf7', // Warm light background
+                dark: '#020617', // Dark mode background
+                glass: 'rgba(255, 255, 255, 0.65)',
+                glassHighlight: 'rgba(255, 255, 255, 0.9)',
+                glassBorder: 'rgba(255, 255, 255, 0.4)',
+              }
+            },
+            animation: {
+              blob: "blob 20s ease-in-out infinite",
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'draw': 'draw 2s ease-in-out forwards',
+              'marquee': 'marquee 60s linear infinite',
+              'marquee-reverse': 'marqueeReverse 60s linear infinite',
+            },
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(10px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              draw: {
+                "0%": { strokeDashoffset: "100" },
+                "100%": { strokeDashoffset: "0" }
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              marqueeReverse: {
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0)' },
+              }
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fdfbf7;
+        color: #0f172a;
+        overflow-x: hidden;
+        font-family: "Poppins", sans-serif;
+        transition: background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1), color 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Hide Scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
+      html.dark body {
+        background-color: #020617;
+        color: #f8fafc;
+      }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Noise Texture Overlay */
+      .bg-noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.04;
+        mix-blend-mode: multiply;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      html.dark .bg-noise {
+        opacity: 0.04;
+        mix-blend-mode: overlay;
+      }
+
+      /* Spotlight Effect Utilities */
+      .spotlight-card {
+        background-color: rgba(255, 255, 255, 0.65);
+        position: relative;
+        overflow: hidden;
+      }
+
+      html.dark .spotlight-card {
+        background-color: rgba(255, 255, 255, 0.03);
+      }
+      
+      .spotlight-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          800px circle at var(--mouse-x) var(--mouse-y), 
+          rgba(255, 255, 255, 0.8), 
+          transparent 40%
+        );
+        opacity: 0;
+        transition: opacity 0.5s;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      html.dark .spotlight-card::before {
+        background: radial-gradient(
+          800px circle at var(--mouse-x) var(--mouse-y), 
+          rgba(255, 255, 255, 0.08), 
+          transparent 40%
+        );
+      }
+
+      .spotlight-card:hover::before {
+        opacity: 1;
+      }
+      
+      .spotlight-card .content {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Logo Animation */
+      .logo-path {
+        stroke-dasharray: 100;
+        animation: draw 3s ease-in-out infinite alternate;
+      }
+
+      /* Pause Animation on Hover */
+      .pause {
+        animation-play-state: paused;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.23.1?external=react,react-dom",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js",
+    "lucide-react": "https://esm.sh/lucide-react@0.378.0?external=react",
+    "firebase/": "https://esm.sh/firebase@^12.8.0/",
+    "react-helmet-async": "https://esm.sh/react-helmet-async@2.0.5?external=react,react-dom",
+    "framer-motion": "https://esm.sh/framer-motion@^12.31.2"
+  }
+}
+</script>
+</head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>

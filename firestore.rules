@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /admissions/{document=**} {
+      allow create: if true; // Allow public submissions
+      allow read: if true;   // Allow admin to view submissions
+      allow update, delete: if false;
+    }
+    match /contact_messages/{document=**} {
+      allow create: if true; // Allow public contact form submissions
+      allow read: if true;   // Allow admin to view messages
+      allow update, delete: if false;
+    }
+  }
+}
